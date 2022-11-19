@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+.navbar-container{
+    margin: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px 40px 10px 40px;
+}
+
+.nav-logo {
+    width: 75px;
+    height: auto;
+}
+
+#navbar-login-btn {
+    border: 2px solid rgb(101, 201, 255);
+    border-radius: 20px;
+    color: rgb(101, 201, 255);
+    cursor: pointer;
+}
+
+#navbar-login-btn:hover {
+    background-color: rgb(101, 201, 255);
+    transition: ease 0.5s;
+    color: #fff;
+}
+
+.navbar-container ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Russo One;
+    list-style: none;
+    gap: 40px;
+}
+
+.navbar-container li:hover {
+    transition: ease 0.5s;
+    color: rgb(101, 201, 255);
+}
+
+.navbar-container li{
+    padding: 10px;
+    cursor: pointer;
+}
+
+/*Start of homepage CSS*/
+
+.homepage-container {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.homepage-leftblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homepage-introduction {
+    font-size: 20px;
+}
+
+.homepage-title {
+    font-family: Luckiest Guy;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.homepage-subtitle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-subtitle {
+    margin: 0;
+    font-size: 30px;
+    font-family: Carter One;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.homepage-subtitle-texts {
+    margin-left: 8px;
+    color: rgb(101, 201, 255);
+}
+
+.homepage-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* border: 3px solid black; */
+    box-shadow: 20px 10px 40px 5px rgb(0, 0, 0);
+    margin-left: 20px;
+}
+
+/* Start of About Section */
+
+.about-container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: #65c9ff;
+}
+
+#about {
+    scroll-margin-top: 95px;
+}
+
+.about-ending-container {
+    width: 100%;
+    height: 10%;
+    background-color: #65c9ff;
+}
+
+.about-title {
+    font-size: 40px;
+    font-family: Luckiest Guy;
+    letter-spacing: 8px;
+    -webkit-text-stroke: 2px #fff;
+    box-shadow: 0px 10px 0px 0px #f3c430;
+}
+
+.about-container p{
+    font-size: 20px;
+    font-family: Russo One;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Start of Skills Section */
+
+.skills-container {
+    width: 100%;
+    height: 90%;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills-particles {
+    height: fill;
+}
+
+.skills-html-container {
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 40px;
+    width: 200px;
+    left: 3rem;
+    top: 3rem;
+    z-index: 1;
+}
