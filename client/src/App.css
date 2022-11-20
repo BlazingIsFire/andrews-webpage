@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 @import url('https://fonts.googleapis.com/css?family=Carter+One');
+
 .navbar-container{
     margin: 0;
     z-index: 2;
@@ -11,6 +12,50 @@
     background-color: #fff;
     box-sizing: border-box;
     padding: 10px 40px 10px 40px;
+}
+
+.navbar-toggle{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 52px;
+    height: 52px;
+    background-color: #65c9ff;
+    border-radius: 30px;
+    gap: 4px;
+}
+
+.navbar-toggle span{
+    height: 3px;
+    width: 50%;
+    background: #fff;
+}
+
+.navbar-toggle span:nth-child(1){
+    top: 16px;
+}
+.navbar-toggle span:nth-child(2){
+    top: 22px;
+}
+.navbar-toggle span:nth-child(3){
+    top: 28px;
+}
+
+.navbar-header{
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    top: 84px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.navbar-header-hide {
+    display: none;
 }
 
 .nav-logo {
@@ -155,9 +200,6 @@
     height: 90%;
     z-index: 0;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #skills-particles {
@@ -168,9 +210,52 @@
     position: absolute;
     border: 2px solid black;
     border-radius: 40px;
+    background-color: gray;
     padding: 40px;
     width: 200px;
     left: 3rem;
     top: 3rem;
     z-index: 1;
+}
+
+@media only screen and (max-width: 1024px){
+    .navbar-container{
+        justify-content: space-between;
+    }
+    .navbar-toggle{
+        display: flex;
+    }
+    .navbar-container ul{
+        display: none;
+    }
+    .nav-logo{
+        width: 60px;
+        left: 0;
+    }
+    .homepage-image{
+        display: none;
+    }
+    .homepage-leftblock{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .homepage-title {
+        text-align: center;
+    }
+    .homepage-subtitle-container{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .about-title{
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 0px;
+    }
+    .about-container p{
+        max-width: 300px;
+    }
+    .about-ending-container{
+        height: 15%;
+    }
 }
