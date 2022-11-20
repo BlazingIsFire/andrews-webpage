@@ -10,7 +10,7 @@ function Navbar() {
 
 
     const handleNavbarToggle = (e) =>{
-        if(navbar === true){setNavbar(false);} else if(navbar === false){setNavbar(true);}
+        setNavbar(!navbar);
     }
 
     return(
@@ -24,7 +24,7 @@ function Navbar() {
                 <li>Projects</li>
                 <li id='navbar-login-btn'>Login</li>
             </ul>
-            <div className='navbar-toggle' onClick={handleNavbarToggle}>
+            <div className={`navbar-toggle ${navbar ? '' : 'open'}`} onClick={handleNavbarToggle}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,9 +32,9 @@ function Navbar() {
         </div>
         <div className={`navbar-header ${navbar ? 'navbar-header-hide' : ''}`}>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
+                <li onClick={() =>{home.scrollIntoView({behavior: 'smooth'})}}>Home</li>
+                <li onClick={() =>{about.scrollIntoView({behavior: 'smooth'})}}>About</li>
+                <li onClick={() => {skills.scrollIntoView({behavior: 'smooth'})}}>Skills</li>
                 <li>Projects</li>
                 <li>Login</li>
             </ul>
