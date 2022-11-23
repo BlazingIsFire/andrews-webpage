@@ -1,13 +1,15 @@
 import { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import myAvatar from '../images/avataaars.png';
 
 function Navbar() {
-    const about = document.getElementById('about');
-    const home = document.getElementById('home');
-    const skills = document.getElementById('skills');
+    const home = () => document.getElementById('home');
+    const about = () => document.getElementById('about');
+    const skills = () => document.getElementById('skills');
+    const projects = () => document.getElementById('projects');
     const [navbar, setNavbar] = useState(true);
-
 
     const handleNavbarToggle = (e) =>{
         setNavbar(!navbar);
@@ -16,12 +18,12 @@ function Navbar() {
     return(
         <>
         <div className='navbar-container'>
-            <img src={myAvatar} className='nav-logo'/>
+            <Link to='/'><img src={myAvatar} className='nav-logo'/></Link>
             <ul>
-                <li onClick={() =>{home.scrollIntoView({behavior: 'smooth'})}}>Home</li>
-                <li onClick={() =>{about.scrollIntoView({behavior: 'smooth'})}}>About</li>
-                <li onClick={() => {skills.scrollIntoView({behavior: 'smooth'})}}>Skills</li>
-                <li>Projects</li>
+                <li onClick={() =>{home().scrollIntoView({behavior: 'smooth'})}}>Home</li>
+                <li onClick={() =>{about().scrollIntoView({behavior: 'smooth'})}}>About</li>
+                <li onClick={() => {skills().scrollIntoView({behavior: 'smooth'})}}>Skills</li>
+                <li onClick={() => {projects().scrollIntoView({behavior: 'smooth'})}}>Projects</li>
                 <li id='navbar-login-btn'>Login</li>
             </ul>
             <div className={`navbar-toggle ${navbar ? '' : 'open'}`} onClick={handleNavbarToggle}>
@@ -32,11 +34,11 @@ function Navbar() {
         </div>
         <div className={`navbar-header ${navbar ? 'navbar-header-hide' : ''}`}>
             <ul>
-                <li onClick={() =>{home.scrollIntoView({behavior: 'smooth'})}}>Home</li>
-                <li onClick={() =>{about.scrollIntoView({behavior: 'smooth'})}}>About</li>
-                <li onClick={() => {skills.scrollIntoView({behavior: 'smooth'})}}>Skills</li>
-                <li>Projects</li>
-                <li>Login</li>
+                <Link className='navbar-header-item' to='/'>Home</Link>
+                <Link className='navbar-header-item' to='/about'>About</Link>
+                <Link className='navbar-header-item' to='/skills'>Skills</Link>
+                <Link className='navbar-header-item' to='/projects'>Projects</Link>
+                <Link className='navbar-header-item' to='/login'>Login</Link>
             </ul>
         </div>
         </>
