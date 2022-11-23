@@ -1,3 +1,4 @@
+import React from 'react';
 import '../App.css';
 import { useCallback } from "react";
 import Particles from "react-particles";
