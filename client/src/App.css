@@ -77,32 +77,53 @@ Mobile Navbar toggle
 .navbar-header{
     z-index: 2;
     width: 100%;
-    height: 5rem;
+    height: 100%;
     top: 84px;
     position: fixed;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: #65c9ff;
+    flex-direction: column;
+    background: rgb(101,201,255);
     animation: navbarHeaderSlide .5s forwards;
     transform-origin: top;
 }
 
 @keyframes navbarHeaderSlide{
     0% {
+        opacity: 0;
         transform: scaleY(0);
     }
     100% {
+        opacity: 1;
         transform: scaleY(1);
     }
+}
+
+.navbar-header-logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 0px 0px 40px 0px rgb(255, 255, 255, 1);
+}
+.navbar-header h1{
+    margin: 0;
+    color: #f3c430;
+    -webkit-text-stroke: 2px #000;
+    font-family: Carter One;
+}
+.navbar-header h4{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: Carter One;
 }
 
 .navbar-header ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     list-style: none;
     padding: 0;
     gap: 20px;
@@ -110,6 +131,7 @@ Mobile Navbar toggle
 
 .navbar-header-item{
     text-decoration: none;
+    font-size: 20px;
     color: inherit;
     font-family: Russo One; 
 }
@@ -434,6 +456,9 @@ Start of Projects Section
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(101,201,255,1) 25%, rgba(101,201,255,1) 50%, rgba(101,201,255,1) 75%, rgba(255,255,255,1) 100%);
 }
+#projects {
+    scroll-margin-top: 75px;
+}
 
 .projects-panel-container{
     display: flex;
@@ -551,7 +576,83 @@ Start of ContactMe section
 .contact-container{
     width: 100%;
     height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
 }
+
+.contact-container-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-container-footer a{
+    color: #000;
+    text-decoration: none;
+}
+.contact-container-footer a:hover{
+    color: #65c9ff;
+}
+
+.contact-box{
+    width: 60%;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    border-radius: 40px;
+    background-color: #f3c430;
+    box-shadow: 0px 0px 20px 0px #000;
+}
+
+.contact-box h1{
+    font-family: Carter One;
+}
+
+#contact-me-btn{
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: 2px solid #000;
+    border-radius: 40px;
+    padding: 10px;
+    transition: all .3s ease;
+}
+#contact-me-btn:hover{
+    scale: 1.2;
+    color: #000;
+    transform: rotate(-4deg);
+    background: rgb(101,201,255);
+}
+#linkedinprofile-svg{
+    width: 50px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+#linkedinprofile-svg:hover {
+    fill: #0077b5;
+}
+
+/* 
+===========================================================
+Start of Contact Page
+===========================================================
+*/
+.contact-page-container {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
 
 /*
 ===========================================================
@@ -560,7 +661,9 @@ Start of ContactMe section
 */
 
 @media only screen and (max-width: 1024px){
+    /* Navbar */
     .navbar-container{
+        background: rgb(255,255,255);
         justify-content: space-between;
     }
     .navbar-toggle{
@@ -573,6 +676,7 @@ Start of ContactMe section
         width: 60px;
         left: 0;
     }
+    /* Homepage */
     .homepage-container-web{
         display: none;
     }
@@ -644,4 +748,14 @@ Start of ContactMe section
         position: static;
         z-index: 2;
     }
+    /* Projects */
+    .projects-container{
+        height: 100%;
+    }
+    .projects-title{
+        font-size: 32px;
+        width: 350px;
+        text-align: center;
+    }
+    /* Contact */
 }
