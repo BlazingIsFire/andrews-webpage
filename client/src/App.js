@@ -1,11 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import Homepage from './components/Homepage';
+import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
+import Contact from './pages/Contact';
+import Homepage from './pages/Homepage';
 
 function App() {
 
@@ -13,16 +15,19 @@ function App() {
     <>
     <Navbar />
       <div className='homepage-container-web'>
-        <Homepage />
-        <About />
-        <Skills />
-        <Projects />
-        <ContactMe />
+          <Routes>
+              <Route>
+                <Route path='/' element={<Homepage />}/>
+              </Route>
+              <Route path='/contact' element={<Contact />}/>
+          </Routes>
       </div>
     <div className='homepage-container-devices'>
       <Routes>
-        <Route path='/' element={<Homepage />} />
+        <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />}/>
+        <Route path='/projects' element={<Projects />}/>
+        <Route path='/contact' element={<ContactMe />}/>
       </Routes>
     </div>
     </>
@@ -30,3 +35,9 @@ function App() {
 }
 
 export default App;
+
+// <Homepage />
+//           <About />
+//           <Skills />
+//           <Projects />
+//           <ContactMe />
