@@ -9,6 +9,7 @@ function Navbar() {
     const about = () => document.getElementById('about');
     const skills = () => document.getElementById('skills');
     const projects = () => document.getElementById('projects');
+    const contactme = () => document.getElementById('contactMe');
     const [navbar, setNavbar] = useState(true);
 
     const handleNavbarToggle = (e) =>{
@@ -20,11 +21,12 @@ function Navbar() {
         <div className='navbar-container'>
             <Link to='/'><img src={myAvatar} className='nav-logo'/></Link>
             <ul>
-                <li onClick={() =>{home().scrollIntoView({behavior: 'smooth'})}}>Home</li>
-                <li onClick={() =>{about().scrollIntoView({behavior: 'smooth'})}}>About</li>
-                <li onClick={() => {skills().scrollIntoView({behavior: 'smooth'})}}>Skills</li>
-                <li onClick={() => {projects().scrollIntoView({behavior: 'smooth'})}}>Projects</li>
-                <li id='navbar-login-btn'>Login</li>
+                <Link to='/' id='navbar-link'><li onClick={() =>{home().scrollIntoView({behavior: 'smooth'})}}>Home</li></Link>
+                <Link to='/' id='navbar-link'><li onClick={() =>{about().scrollIntoView({behavior: 'smooth'})}}>About</li></Link>
+                <Link to='/' id='navbar-link'><li onClick={() => {skills().scrollIntoView({behavior: 'smooth'})}}>Skills</li></Link>
+                <Link to='/' id='navbar-link'><li onClick={() => {projects().scrollIntoView({behavior: 'smooth'})}}>Projects</li></Link>
+                <Link to='/' id='navbar-link'><li onClick={() => {contactme().scrollIntoView({behavior: 'smooth'})}}>Contact</li></Link>
+                <Link to='/login' id='navbar-link'><li id='navbar-login-btn'>Login</li></Link>
             </ul>
             <div className={`navbar-toggle ${navbar ? '' : 'open'}`} onClick={handleNavbarToggle}>
                 <span></span>
@@ -33,13 +35,17 @@ function Navbar() {
             </div>
         </div>
         <div className={`navbar-header ${navbar ? 'navbar-header-hide' : ''}`}>
+            <img src={myAvatar} className='navbar-header-logo'/>
+            <h1>Andrew Schweitzer</h1>
+            <h4>Software Engineer | Cyber Security | Student</h4>
             <ul>
                 <Link className='navbar-header-item' to='/'>Home</Link>
                 <Link className='navbar-header-item' to='/about'>About</Link>
-                <Link className='navbar-header-item' to='/skills'>Skills</Link>
                 <Link className='navbar-header-item' to='/projects'>Projects</Link>
+                <Link className='navbar-header-item' to='/contact'>Contact</Link>
                 <Link className='navbar-header-item' to='/login'>Login</Link>
             </ul>
+            <h5>Designed and built by Andrew Schweitzer</h5>
         </div>
         </>
     )
