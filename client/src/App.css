@@ -338,7 +338,7 @@ Start of About Section
 }
 
 #skills-particles {
-    height: fill;
+    height: stretch;
 }
 
 .skills-large-container {
