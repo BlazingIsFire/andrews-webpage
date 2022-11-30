@@ -3,11 +3,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 import Contact from './pages/Contact';
 import Homepage from './pages/Homepage';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
                 <Route path='/' element={<Homepage />}/>
               </Route>
               <Route path='/contact' element={<Contact />}/>
+              <Route path='/login' element={<Login />}/>
+              <Route path='/register' element={<Register />}/>
           </Routes>
       </div>
     <div className='homepage-container-devices'>
@@ -35,9 +38,3 @@ function App() {
 }
 
 export default App;
-
-// <Homepage />
-//           <About />
-//           <Skills />
-//           <Projects />
-//           <ContactMe />
