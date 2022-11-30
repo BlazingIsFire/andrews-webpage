@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+/* 
+===========================================================
+Start of Contact Page
+===========================================================
+*/
+.contact-page-container {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contact-page-box{
+    width: 800px;
+    height: 375px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 5px #000;
+    background-color: #65c9ff;
+}
+
+
+/* Contact box left side */
+.contact-box-left-container{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.contact-box-left-subcontainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 6px;
+}
+.contact-box-left-container h1{
+    margin: 0;
+    font-family: Carter One;
+    color: #f3c430;
+    -webkit-text-stroke: 1px #000;
+}
+.contact-box-left{
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #5A5A5A;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .3s ease;
+}
+.contact-box-left:hover {
+    transform: scale(1.1);
+}
+.contact-box-left h2{
+    margin: 0;
+    color: #fff;
+}
+#contact-phone{
+    width: 50px;
+    fill: #65c9ff;
+}
+#contact-mail{
+    width: 50px;
+    fill: #65c9ff;
+}
+#contact-email{
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Contact box right side */
+.contact-box-right-container{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.contact-box-right-container h1{
+    margin: 0;
+    color: #f3c430;
+    -webkit-text-stroke: 1px #000;
+    font-family: Carter One;
+}
+
+/* Contact form */
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.contact-form-input{
+    width: 100%;
+    padding: 4px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    z-index: 1;
+}
+.contact-form-input:focus{
+    color: #000;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #f3c430;
+}
+
+/* Form Labels / Full Name*/
+.contact-form-label-name{
+    position: absolute;
+    display: block;
+    top: 5px;
+    left: 4px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+#contact-full-name::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.contact-form-input:focus + .contact-form-label-name{
+    color: #f3c430;
+    position: absolute;
+    top: -10px;
+    left: 4px;
+    display: block;
+    font-size: 15px;
+    transition: .2s;
+}
+.contact-form-input:valid + .contact-form-label-name{
+    top: -10px;
+    color: #000;
+    font-size: 15px;
+}
+.contact-form-input:valid{
+    border-bottom: 2px solid #f3c430;
+}
+
+/* Form labels / Email address */
+.contact-form-label-email{
+    position: absolute;
+    display: block;
+    top: 60px;
+    left: 4px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+#contact-email-address::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.contact-form-input:focus + .contact-form-label-email{
+    color: #f3c430;
+    position: absolute;
+    top: 45px;
+    left: 4px;
+    display: block;
+    font-size: 15px;
+    transition: .2s;
+}
+.contact-form-input:valid + .contact-form-label-email{
+    top: 45px;
+    color: #000;
+    font-size: 15px;
+}
+
+/* Form labels / Subject */
+.contact-form-label-subject{
+    position: absolute;
+    display: block;
+    top: 120px;
+    left: 4px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+#contact-subject::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.contact-form-input:focus + .contact-form-label-subject{
+    color: #f3c430;
+    position: absolute;
+    top: 102px;
+    left: 4px;
+    display: block;
+    font-size: 15px;
+    transition: .2s;
+}
+.contact-form-input:valid + .contact-form-label-subject{
+    top: 102px;
+    color: #000;
+    font-size: 15px;
+}
+
+/* Form labels / Message area */
+#contact-form-message{
+    width: 100%;
+    padding: 4px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    z-index: 1;
+    resize: none;
+}
+.contact-form-label-message{
+    position: absolute;
+    display: block;
+    top: 170px;
+    left: 4px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+#contact-form-message::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+#contact-form-message:focus + .contact-form-label-message{
+    color: #f3c430;
+    position: absolute;
+    top: 155px;
+    left: 4px;
+    display: block;
+    font-size: 15px;
+    transition: .2s;
+}
+#contact-form-message:valid + .contact-form-label-message{
+    top: 155px;
+    color: #000;
+    font-size: 15px;
+}
+#contact-form-message:valid{
+    border-bottom: 2px solid #f3c430;
+}
+#contact-form-message:focus{
+    border-bottom: 2px solid #f3c430;
+}
+
+/* Submit area */
+.contact-form-submit-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#contact-form-submit-btn{
+    width: 150px;
+    font-size: 20px;
+    padding: 6px;
+    background: transparent;
+    font-family: Carter One;
+    -webkit-text-stroke: .5px #000;
+    border: 2px solid #000;
+    border-radius: 20px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+#contact-form-submit-btn:hover{
+    scale: 1.1;
+    transform: rotate(-4deg);
+    background: #f3c430;
+}
