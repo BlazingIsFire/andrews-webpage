@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+/* 
+===========================================================
+Start of Register Page
+===========================================================
+*/
+
+.register-page-container{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.register-page-box{
+    width: 400px;
+    height: 400px;
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 5px #000;
+    background-color: #65c9ff;
+}
+
+/*
+=============================
+Start of Register form 
+=============================
+*/
+.register-page-box h1{
+    color: #f3c430;
+    margin: 0;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px #000;
+    font-family: Carter One;
+}
+
+.register-page-box form{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/*
+=============================
+Form inputs 
+=============================
+*/
+.register-form-input {
+    width: 75%;
+    padding: 4px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    z-index: 1;
+}
+/*
+=============================
+Username label
+=============================
+*/
+#register-username-label{
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 48px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+#register-username::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.register-form-input:focus + #register-username-label{
+    color: #f3c430;
+    position: absolute;
+    top: -12px;
+    left: 48px;
+    font-size: 15px;
+    transition: .2s;
+}
+.register-form-input:valid + #register-username-label{
+    top: -12px;
+    color: #000;
+    font-size: 15px;
+}
+
+/*
+=============================
+Email Address label 
+=============================
+*/
+#email-label{
+    position: absolute;
+    display: block;
+    top: 65px;
+    left: 48px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+#register-email::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.register-form-input:focus + #email-label{
+    color: #f3c430;
+    position: absolute;
+    top: 53px;
+    left: 48px;
+    font-size: 15px;
+    transition: .2s;
+}
+.register-form-input:valid + #email-label{
+    top: 53px;
+    color: #000;
+    font-size: 15px;
+}
+
+
+/*
+=============================
+Password label 
+=============================
+*/
+#register-password-label{
+    position: absolute;
+    display: block;
+    top: 130px;
+    left: 48px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+.register-form-input:focus + #register-password-label{
+    color: #f3c430;
+    position: absolute;
+    top: 118px;
+    left: 48px;
+    display: block;
+    font-size: 15px;
+    transition: .2s;
+}
+.register-form-input:valid + #register-password-label{
+    color: #000;
+    position: absolute;
+    top: 118px;
+    left: 48px;
+    display: block;
+    font-size: 15px;
+}
+#register-password::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+/*
+=============================
+Submit button 
+=============================
+*/
+.register-form-submit-btn{
+    width: 150px;
+    font-size: 20px;
+    padding: 6px;
+    font-family: Carter One;
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 20px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.register-form-submit-btn:hover{
+    scale: 1.1;
+    transform: rotate(-4deg);
+    color: #000;
+    background: #f3c430;
+}
