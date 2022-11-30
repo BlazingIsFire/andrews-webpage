@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+/* 
+===========================================================
+Start of Login Page
+===========================================================
+*/
+
+.login-page-container{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.login-page-box{
+    width: 400px;
+    height: 400px;
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 5px #000;
+    background-color: #65c9ff;
+}
+
+/*
+=============================
+Start of Login form 
+=============================
+*/
+.login-page-box h1{
+    color: #f3c430;
+    margin: 0;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px #000;
+    font-family: Carter One;
+}
+
+.login-page-box form{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/*
+=============================
+Form inputs 
+=============================
+*/
+.login-form-input {
+    width: 75%;
+    padding: 4px;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    z-index: 1;
+}
+/*
+=============================
+Username label
+=============================
+*/
+#username-label{
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 48px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+#login-username::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.login-form-input:focus + #username-label{
+    color: #f3c430;
+    position: absolute;
+    top: -12px;
+    left: 48px;
+    font-size: 15px;
+    transition: .2s;
+}
+.login-form-input:valid + #username-label{
+    top: -12px;
+    color: #000;
+    font-size: 15px;
+}
+
+/*
+=============================
+Password label 
+=============================
+*/
+#password-label{
+    position: absolute;
+    display: block;
+    top: 65px;
+    left: 48px;
+    font-size: 20px;
+    transition: .2s;
+    z-index: 0;
+}
+.login-form-input:focus + #password-label{
+    color: #f3c430;
+    position: absolute;
+    top: 53px;
+    left: 48px;
+    display: block;
+    font-size: 15px;
+    transition: .2s;
+}
+.login-form-input:valid + #password-label{
+    color: #000;
+    position: absolute;
+    top: 53px;
+    left: 48px;
+    display: block;
+    font-size: 15px;
+}
+#login-password::placeholder{
+    opacity: 1;
+    color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+/*
+=============================
+Submit button 
+=============================
+*/
+.login-form-submit-btn{
+    width: 150px;
+    font-size: 20px;
+    padding: 6px;
+    font-family: Carter One;
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 20px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.login-form-submit-btn:hover{
+    scale: 1.1;
+    transform: rotate(-4deg);
+    color: #000;
+    background: #f3c430;
+}
+
+/* 
+=============================
+Login Form register buttons
+=============================
+*/
+
+.login-page-box-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login-page-box-register h3{
+    color: #f3c430;
+    -webkit-text-stroke: 1px #000;
+    font-family: Carter One;
+}
+#login-page-register-btn{
+    width: 150px;
+    font-size: 20px;
+    padding: 6px;
+    font-family: Carter One;
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 20px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+#login-page-register-btn:hover{
+    scale: 1.1;
+    transform: rotate(4deg);
+    color: #000;
+    background: #f3c430;
+}
