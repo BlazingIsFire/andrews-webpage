@@ -71,34 +71,34 @@ Form inputs
 }
 /*
 =============================
-Username label
+confirmPassword label
 =============================
 */
-#register-username-label{
+#register-confirmPassword-label{
     position: absolute;
     display: block;
-    top: 0px;
+    top: 130px;
     left: 48px;
     font-size: 20px;
     transition: .2s;
     z-index: 0;
 }
-#register-username::placeholder{
+#register-confirmPassword::placeholder{
     opacity: 1;
     color: transparent;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
-.register-form-input:focus + #register-username-label{
+.register-form-input:focus + #register-confirmPassword-label{
     color: #f3c430;
     position: absolute;
-    top: -12px;
+    top: 118px;
     left: 48px;
     font-size: 15px;
     transition: .2s;
 }
-.register-form-input:valid + #register-username-label{
-    top: -12px;
+.register-form-input:valid + #register-confirmPassword-label{
+    top: 118px;
     color: #000;
     font-size: 15px;
 }
@@ -108,10 +108,10 @@ Username label
 Email Address label 
 =============================
 */
-#email-label{
+#register-email-label{
     position: absolute;
     display: block;
-    top: 65px;
+    top: 0px;
     left: 48px;
     font-size: 20px;
     transition: .2s;
@@ -123,16 +123,16 @@ Email Address label
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
-.register-form-input:focus + #email-label{
+.register-form-input:focus + #register-email-label{
     color: #f3c430;
     position: absolute;
-    top: 53px;
+    top: -12px;
     left: 48px;
     font-size: 15px;
     transition: .2s;
 }
-.register-form-input:valid + #email-label{
-    top: 53px;
+.register-form-input:valid + #register-email-label{
+    top: -12px;
     color: #000;
     font-size: 15px;
 }
@@ -146,7 +146,7 @@ Password label
 #register-password-label{
     position: absolute;
     display: block;
-    top: 130px;
+    top: 65px;
     left: 48px;
     font-size: 20px;
     transition: .2s;
@@ -155,7 +155,7 @@ Password label
 .register-form-input:focus + #register-password-label{
     color: #f3c430;
     position: absolute;
-    top: 118px;
+    top: 53px;
     left: 48px;
     display: block;
     font-size: 15px;
@@ -164,7 +164,7 @@ Password label
 .register-form-input:valid + #register-password-label{
     color: #000;
     position: absolute;
-    top: 118px;
+    top: 53px;
     left: 48px;
     display: block;
     font-size: 15px;

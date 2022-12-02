@@ -15,7 +15,7 @@ function ContactMe() {
                 </a>
             </div>
             <div className='contact-container-footer'>
-                <h5>Designed and built by <a href='https://github.com/BlazingIsFire' target='_blank' title='Github'>Andrew Schweitzer</a>.</h5>
+                <h5>Designed and built by <a href='https://github.com/BlazingIsFire' target='_blank' rel='noreferrer' title='Github'>Andrew Schweitzer</a>.</h5>
             </div>
         </div>
         </>

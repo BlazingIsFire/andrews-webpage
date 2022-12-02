@@ -12,7 +12,7 @@ function Projects() {
                     <div className='projects-panel-head'>
                         <FolderSVG id='projects-folder'/>
                         <div id='projects-head-end'>
-                            <a href='https://github.com/BlazingIsFire/calculator-app' target='_blank'>
+                            <a href='https://github.com/BlazingIsFire/calculator-app' target='_blank' rel='noreferrer'>
                                 <GithubLogo id='projects-github' title='Github'/>
                             </a>
                         </div>
@@ -20,7 +20,7 @@ function Projects() {
                     <div className='projects-panel-content'>
                         <h2>Calculator App</h2>
                         <p>A simple web-based calculator application I created to help build upon my skills and learn the DOM.</p>
-                        <a href='https://blazingisfire.github.io/calculator-app/' target='_blank'>Live Demo</a>
+                        <a href='https://blazingisfire.github.io/calculator-app/' target='_blank' rel='noreferrer'>Live Demo</a>
                     </div>
                     <div className='projects-panel-endtags'>
                         <h4>HTML</h4>
@@ -32,7 +32,7 @@ function Projects() {
                     <div className='projects-panel-head'>
                         <FolderSVG id='projects-folder'/>
                         <div id='projects-head-end'>
-                            <a href='https://github.com/BlazingIsFire/react_trello' target='_blank'>
+                            <a href='https://github.com/BlazingIsFire/react_trello' target='_blank' rel='noreferrer'>
                                 <GithubLogo id='projects-github' title='Github'/>
                             </a>
                         </div>
@@ -40,7 +40,7 @@ function Projects() {
                     <div className='projects-panel-content'>
                         <h2>Trello Clone</h2>
                         <p>A lightweight Trello Clone with no backend. All data is stored using states and context.</p>
-                        <a href='https://blazingisfire.github.io/react_trello/' target='_blank'>Live Demo</a>
+                        <a href='https://blazingisfire.github.io/react_trello/' target='_blank' rel='noreferrer'>Live Demo</a>
                     </div>
                     <div className='projects-panel-endtags'>
                         <h4>React</h4>

@@ -26,7 +26,7 @@ function Home() {
                 </div>
             </div>
             <div className='homepage-rightblock'>
-                <img src={myAvatar} className='homepage-image'/>
+                <img src={myAvatar} className='homepage-image' alt='Homepage Andrews Avatar'/>
             </div>    
         </div>
     )

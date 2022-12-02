@@ -19,7 +19,7 @@ function Navbar() {
     return(
         <>
         <div className='navbar-container'>
-            <Link to='/'><img src={myAvatar} className='nav-logo'/></Link>
+            <Link to='/'><img src={myAvatar} className='nav-logo' alt='Andrews Avatar Navbar'/></Link>
             <ul>
                 <Link to='/' id='navbar-link'><li onClick={() =>{home().scrollIntoView({behavior: 'smooth'})}}>Home</li></Link>
                 <Link to='/' id='navbar-link'><li onClick={() =>{about().scrollIntoView({behavior: 'smooth'})}}>About</li></Link>
@@ -35,7 +35,7 @@ function Navbar() {
             </div>
         </div>
         <div className={`navbar-header ${navbar ? 'navbar-header-hide' : ''}`}>
-            <img src={myAvatar} className='navbar-header-logo'/>
+            <img src={myAvatar} className='navbar-header-logo' alt='Andrews Avatar Navabr mobile'/>
             <h1>Andrew Schweitzer</h1>
             <h4>Software Engineer | Cyber Security | Student</h4>
             <ul>
