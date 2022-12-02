@@ -200,3 +200,15 @@ Login Form register buttons
     color: #000;
     background: #f3c430;
 }
+
+/*
+===========================================================
+@Media's for devices
+=========================================================== 
+*/
+
+@media only screen and (max-width: 1024px){
+    .login-page-box{
+        width: 80%;
+    }
+}

@@ -199,3 +199,15 @@ Submit button
     color: #000;
     background: #f3c430;
 }
+
+/*
+===========================================================
+@Media's for devices
+=========================================================== 
+*/
+
+@media only screen and (max-width: 1024px){
+    .register-page-box{
+        width: 80%;
+    }
+}
