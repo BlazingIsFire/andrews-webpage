@@ -2,7 +2,7 @@ import '../App.css';
 import React from 'react';
 import secPlus from '../images/security_plus.png';
 import md100 from '../images/md-100.png';
-import awsCloudPrac from '../images/aws-practitioner.png';
+// import awsCloudPrac from '../images/aws-practitioner.png';
 
 function About() {
     return(
@@ -13,7 +13,7 @@ function About() {
             <div className='about-badges-container'>
                 <img src={secPlus} className='about-badge' alt='Security Plus Badge'/>
                 <img src={md100} className='about-badge'alt='MD-100 Badge'/>
-                <img src={awsCloudPrac} className='about-badge' alt='Amazon Web Services CCP Badge'/>
+                {/* <img src={awsCloudPrac} className='about-badge' alt='Amazon Web Services CCP Badge'/> */}
             </div>
         </div>
         <div className='about-ending-container' />

@@ -1,5 +1,5 @@
 import '../App.css';
-import '../RegisterPage.css';
+import './RegisterPage.css';
 import { useState } from 'react';
 
 function Register() {
@@ -23,6 +23,7 @@ function Register() {
                     <label htmlFor='confirmPassword' id='register-confirmPassword-label'>Confirm Password</label>
 
                     <input className='register-form-submit-btn' type='submit' value='Register Now' />
+                    <h5>NOTE: Register is still currently in development.</h5>
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import '../App.css';
-import '../ContactPage.css';
+import './ContactPage.css';
 import { useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import contactvcf from './contactvcf.vcf';
