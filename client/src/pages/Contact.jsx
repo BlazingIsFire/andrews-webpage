@@ -2,6 +2,7 @@ import '../App.css';
 import '../ContactPage.css';
 import { useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import contactvcf from './contactvcf.vcf';
 import { ReactComponent as PhoneSVG } from '../images/phone.svg';
 import { ReactComponent as MailSVG } from '../images/mail.svg';
 
@@ -23,6 +24,9 @@ function Contact() {
                             <MailSVG id='contact-mail'/>
                             <h2 id='contact-email'>andrew@andrew-schweitzer.tech</h2>
                         </div>
+                        <a href={contactvcf} download='Andrew_Schweitzer'>
+                            <button id='vcf-btn'>Download Contact Card</button>
+                        </a>
                     </div>
                 </div>
                 <div className='contact-box-right-container'>

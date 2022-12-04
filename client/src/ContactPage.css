@@ -90,6 +90,23 @@ Contact box left side
     white-space: nowrap;
 }
 
+#vcf-btn{
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 40px;
+    padding: 10px;
+    transition: all .3s ease;
+}
+#vcf-btn:hover{
+    scale: 1.1;
+    color: #000;
+    transform: rotate(-4deg);
+    background: #f3c430;
+}
+
 /*
 ===========================================================
 Contact box right side 
@@ -335,7 +352,7 @@ Form labels / Message area
     .contact-page-box{
         max-width: 350px;
         height: auto;
-        margin-top: 80px;
+        margin-top: 90px;
         align-items: center;
         flex-direction: column;
     }
@@ -359,7 +376,7 @@ Form labels / Message area
     .contact-page-box{
         max-width: auto;
         height: auto;
-        margin-top: 80px;
+        margin-top: 150px;
         align-items: center;
         flex-direction: column;
     }
@@ -383,7 +400,7 @@ Form labels / Message area
     .contact-page-box{
         max-width: 350px;
         margin: 80px;
-        margin-top: 300px;
+        margin-top: 330px;
         align-items: center;
         flex-direction: column;
     }

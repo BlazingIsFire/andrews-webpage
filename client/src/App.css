@@ -144,6 +144,23 @@ Mobile Navbar toggle
     display: none;
 }
 
+.navbar-vcf-btn{
+    font-size: 15px;
+    cursor: pointer;
+    background: none;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 40px;
+    padding: 6px;
+    transition: all .3s ease;
+}
+.navbar-vcf-btn:hover{
+    scale: 1.1;
+    color: #000;
+    transform: rotate(-4deg);
+    background: #f3c430;
+}
+
 /* 
 ===========================================================
 End of Mobile Navbar
@@ -236,7 +253,8 @@ Start of homepage CSS
     font-size: 50px;
     font-weight: 700;
     margin: 0;
-    -webkit-text-stroke: 2px #fff;
+    color: #f3c430;
+    -webkit-text-stroke: 2px #000;
 }
 
 .homepage-subtitle-container {
@@ -745,5 +763,17 @@ Start of ContactMe section
         width: 350px;
         text-align: center;
     }
-    /* Contact */
+}
+
+
+@media only screen and (max-width: 800px){
+    .projects-title{
+        margin-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .projects-title{
+        margin-top: 140px;
+    }
 }

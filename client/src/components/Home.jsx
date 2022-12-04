@@ -4,7 +4,7 @@ import '../App.css';
 import myAvatar from '../images/avataaars.png';
 
 function Home() {
-    const subtitleText = ['Software Engineer', 'Developer', 'Cyber Security Analyst', 'DoD Employee', 'Firefighter'];
+    const subtitleText = ['Software Engineer', 'Developer', 'Cyber Security Analyst', 'Student', 'Firefighter', 'Chronic Illness Warrior'];
     const [subtitleIndex, setSubtitleIndex] = useState(0);
   
     useEffect(() => {

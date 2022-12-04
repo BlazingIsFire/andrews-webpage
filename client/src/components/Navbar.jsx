@@ -2,6 +2,7 @@ import { useState } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import contactvcf from '../pages/contactvcf.vcf';
 import myAvatar from '../images/avataaars.png';
 
 function Navbar() {
@@ -45,6 +46,9 @@ function Navbar() {
                 <Link className='navbar-header-item' to='/contact'>Contact</Link>
                 <Link className='navbar-header-item' to='/login'>Login</Link>
             </ul>
+            <a href={contactvcf} download='Andrew_Schweitzer'>
+                <button className='navbar-vcf-btn'>Download Contact Card</button>
+            </a>
             <h5>Designed and built by Andrew Schweitzer</h5>
         </div>
         </>
