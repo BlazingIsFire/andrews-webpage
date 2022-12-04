@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//iOS 16.0//EN
+N:Schweitzer;Andrew;;;
+FN:Andrew Schweitzer
+EMAIL;type=INTERNET;type=HOME;type=pref:andrew@andrewschweitzer.tech
+TEL;type=WORK;type=VOICE;type=pref:(443) 645-8414
+item1.URL;type=pref:http://andrewschweitzer.tech
+item1.X-ABLabel:_$!<HomePage>!$_
+BDAY;value=date:2002-11-01
+REV:2022-12-04T01:49:51Z
+X-IMAGETYPE:PHOTO
+X-IMAGEHASH:X7vCDOssO904Z3Qis0ek8Q==
+END:VCARD
