@@ -71,10 +71,10 @@ Form inputs
 }
 /*
 =============================
-Username label
+Email Address label
 =============================
 */
-#username-label{
+#email-label{
     position: absolute;
     display: block;
     top: 0px;
@@ -83,13 +83,13 @@ Username label
     transition: .2s;
     z-index: 0;
 }
-#login-username::placeholder{
+#login-email::placeholder{
     opacity: 1;
     color: transparent;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
-.login-form-input:focus + #username-label{
+.login-form-input:focus + #email-label{
     color: #f3c430;
     position: absolute;
     top: -12px;
@@ -97,7 +97,7 @@ Username label
     font-size: 15px;
     transition: .2s;
 }
-.login-form-input:valid + #username-label{
+.login-form-input:valid + #email-label{
     top: -12px;
     color: #000;
     font-size: 15px;
