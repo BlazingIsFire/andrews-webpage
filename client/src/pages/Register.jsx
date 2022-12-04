@@ -7,12 +7,16 @@ function Register() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+    const handleOutOfService = () =>{
+        alert('Sorry, this service is temporarily unavailable. Please check back soon!');
+    }
+
     return(
         <>
         <div className='register-page-container'>
             <div className='register-page-box'>
                 <h1>Register:</h1>
-                <form>
+                <form onSubmit={handleOutOfService}>
                     <input className='register-form-input' id='register-email' type='email' placeholder='Email Address' value={email} name='email' onChange={(e) => setEmail(e.target.value)} required/>
                     <label htmlFor='email' id='register-email-label'>Email Address</label>
 

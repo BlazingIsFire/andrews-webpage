@@ -8,7 +8,7 @@
 Start of Contact Page
 ===========================================================
 */
-.contact-page-container {
+.contact-page-container-web {
     z-index: 1;
     height: 100%;
     width: 100%;
@@ -17,6 +17,18 @@ Start of Contact Page
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+}
+
+.contact-page-container-mobile{
+    display: none;
+    z-index: 1;
+    height: stretch;
+    width: 100%;
+    padding-top: 120px;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(101,201,255,1) 25%, rgba(101,201,255,1) 50%, rgba(101,201,255,1) 75%, rgba(255,255,255,1) 100%);
 }
 
 .contact-page-box{
@@ -92,6 +104,7 @@ Contact box left side
 
 #vcf-btn{
     font-size: 20px;
+    color: #000;
     cursor: pointer;
     background: none;
     font-family: Carter One;
@@ -335,6 +348,7 @@ Form labels / Message area
     border-radius: 20px;
     transition: all .3s ease;
     cursor: pointer;
+    color: #000;
 }
 #contact-form-submit-btn:hover{
     scale: 1.1;
@@ -348,60 +362,23 @@ Form labels / Message area
 =========================================================== 
 */
 
-@media only screen and (max-width: 1083px){
-    .contact-page-box{
-        max-width: 350px;
-        height: auto;
-        margin-top: 90px;
-        align-items: center;
-        flex-direction: column;
-    }
-    .contact-box-left-container{
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-    .contact-box-right-container{
-        width: 90%;
-        box-sizing: border-box;
-    }
-}
-
 @media only screen and (max-width: 800px){
-    .contact-page-box{
-        max-width: auto;
-        height: auto;
-        margin-top: 150px;
-        align-items: center;
-        flex-direction: column;
+    .contact-page-container-web{
+        display: none;
     }
-    .contact-box-left-container{
-        width: 100%;
-        height: 100%;
-        padding: 20px;
+    .contact-page-container-mobile{
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
     }
-    .contact-box-right-container{
-        width: 90%;
-        box-sizing: border-box;
+    .contact-page-container-mobile h1{
+        margin: 0;
+        font-family: Carter One;
+        color: #f3c430;
+        -webkit-text-stroke: 1px #000;
     }
-}
-
-@media only screen and (max-width: 360px){
-    .contact-page-box{
-        max-width: 350px;
-        margin: 80px;
-        margin-top: 330px;
-        align-items: center;
-        flex-direction: column;
+    #contact-form{
+        width: 300px;
+    }
+    .contact-form-input{
+        max-width: 300px;
     }
 }

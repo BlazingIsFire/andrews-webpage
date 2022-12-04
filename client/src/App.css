@@ -148,6 +148,7 @@ Mobile Navbar toggle
     font-size: 15px;
     cursor: pointer;
     background: none;
+    color: #000;
     font-family: Carter One;
     border: 2px solid #000;
     border-radius: 40px;
@@ -467,7 +468,7 @@ Start of Projects Section
 ===========================================================
 */
 
-.projects-container{
+.projects-container-web{
     z-index: 0;
     position: relative;
     height: auto;
@@ -483,6 +484,20 @@ Start of Projects Section
     scroll-margin-top: 75px;
 }
 
+.projects-container-mobile{
+    z-index: 0;
+    position: relative;
+    height: stretch;
+    width: 100%;
+    padding-top: 174px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(101,201,255,1) 25%, rgba(101,201,255,1) 50%, rgba(101,201,255,1) 75%, rgba(255,255,255,1) 100%);
+}
+
 .projects-panel-container{
     display: flex;
     flex-direction: row;
@@ -496,7 +511,6 @@ Start of Projects Section
     font-size: 40px;
     font-family: Luckiest Guy;
     letter-spacing: 8px;
-    margin-top: 70px;
     -webkit-text-stroke: 2px #fff;
     box-shadow: 0px 10px 0px 0px #f3c430;
 }
@@ -754,26 +768,19 @@ Start of ContactMe section
         position: static;
         z-index: 2;
     }
-    /* Projects */
-    .projects-container{
-        height: 100%;
-    }
-    .projects-title{
-        font-size: 32px;
-        width: 350px;
-        text-align: center;
-    }
 }
 
 
 @media only screen and (max-width: 800px){
-    .projects-title{
-        margin-top: 70px;
+    .projects-container-web{
+        display: none;
     }
-}
-
-@media only screen and (max-width: 360px){
+    .projects-container-mobile{
+        display: flex;
+    }
     .projects-title{
-        margin-top: 140px;
+        font-size: 30px;
+        margin-top: 20px;
+        text-align: center;
     }
 }

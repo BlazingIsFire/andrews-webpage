@@ -7,12 +7,16 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleOutOfService = () =>{
+        alert('Sorry, this service is temporarily unavailable. Please check back soon!');
+    }
+
     return(
         <>
         <div className='login-page-container'>
             <div className='login-page-box'>
                 <h1>Login:</h1>
-                <form >
+                <form onSubmit={handleOutOfService} >
                     <input className='login-form-input' id='login-email' type='email' placeholder='Email Address' name='email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
                     <label htmlFor='email' id='email-label'>Email Address</label>
                     <input className='login-form-input' id='login-password' type='password' placeholder='Password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} required/>
