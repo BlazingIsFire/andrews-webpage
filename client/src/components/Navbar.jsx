@@ -40,11 +40,11 @@ function Navbar() {
             <h1>Andrew Schweitzer</h1>
             <h4>Software Engineer | Cyber Security | Student</h4>
             <ul>
-                <Link className='navbar-header-item' to='/'>Home</Link>
-                <Link className='navbar-header-item' to='/about'>About</Link>
-                <Link className='navbar-header-item' to='/projects'>Projects</Link>
-                <Link className='navbar-header-item' to='/contact'>Contact</Link>
-                <Link className='navbar-header-item' to='/login'>Login</Link>
+                <Link className='navbar-header-item' to='/' onClick={handleNavbarToggle}>Home</Link>
+                <Link className='navbar-header-item' to='/about' onClick={handleNavbarToggle}>About</Link>
+                <Link className='navbar-header-item' to='/projects' onClick={handleNavbarToggle}>Projects</Link>
+                <Link className='navbar-header-item' to='/contact' onClick={handleNavbarToggle}>Contact</Link>
+                <Link className='navbar-header-item' to='/login' onClick={handleNavbarToggle}>Login</Link>
             </ul>
             <a href={contactvcf} download='Andrew_Schweitzer'>
                 <button className='navbar-vcf-btn'>Download Contact Card</button>
