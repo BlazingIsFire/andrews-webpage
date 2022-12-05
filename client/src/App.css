@@ -347,16 +347,45 @@ Start of About Section
 .skills-container {
     width: 100%;
     height: 90%;
-    z-index: 0;
+    z-index: 1;
     position: relative;
 }
-
+.skills-objects-container{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
 #skills {
     scroll-margin-top: 72px;
 }
-
 #skills-particles {
     height: stretch;
+}
+
+.skills-objects-top,
+.skills-objects-end{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills-objects-middle{
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .skills-large-container {
@@ -364,51 +393,18 @@ Start of About Section
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
     border: 2px solid #000;
     border-radius: 40px;
     background-color: #fff;
     padding: 30px;
     width: 175px;
+    margin: 0;
     z-index: 1;
 }
 
 .skills-large-container:hover{
     scale: 1.1;
     transition: all .3s ease-in-out;
-}
-
-#html-container{
-    left: 3rem;
-    top: 2rem;
-}
-#css-container{
-    left: 4rem;
-    top: 20rem;
-}
-#git-container{
-    left: 22rem;
-    top: 9rem;
-}
-#react-container{
-    left: 31rem;
-    top: 21rem;
-}
-#js-container{
-    left: 40rem;
-    top: 1.5rem;
-}
-#node-container{
-    left: 50rem;
-    top: 14rem;
-}
-#aws-container{
-    left: 65rem;
-    top: 2rem;
-}
-#linux-container{
-    left: 67rem;
-    top: 21rem;
 }
 
 .progress {
