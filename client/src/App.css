@@ -779,3 +779,10 @@ Start of ContactMe section
         text-align: center;
     }
 }
+
+@media only screen and (max-height: 670px){
+    .navbar-header ul{
+        max-width: 300px;
+        flex-flow: row wrap;
+    }
+}
