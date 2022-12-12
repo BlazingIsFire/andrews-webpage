@@ -1,15 +1,22 @@
 import '../App.css';
 import './ContactPage.css';
-import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import contactvcf from './contactvcf.vcf';
 import { ReactComponent as PhoneSVG } from '../images/phone.svg';
 import { ReactComponent as MailSVG } from '../images/mail.svg';
 
 function Contact() {
 
-    const handleOutOfService = () =>{
-        alert('Sorry, this service is temporarily unavailable. Please check back soon!');
+    const handleSendMessage = (e) =>{
+        e.preventDefault();
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_NAME, e.target, process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+        e.target.reset();
+        alert('Message has been sent!');
     }
+
+    // const handleOutOfService = () =>{
+    //     alert('Sorry, this service is temporarily unavailable. Please check back soon!');
+    // }
 
     return(
         <>
@@ -33,8 +40,8 @@ function Contact() {
                 </div>
                 <div className='contact-box-right-container'>
                     <h1>Leave me a message:</h1>
-                    <form id='contact-form' onSubmit={handleOutOfService}>
-                        <input className='contact-form-input' id='contact-full-name' placeholder='Full Name' type='text' name='name' required/>
+                    <form id='contact-form' onSubmit={handleSendMessage}>
+                        <input className='contact-form-input' id='contact-full-name' placeholder='Full Name' type='text' name="name" required/>
                         <label htmlFor='name' className='contact-form-label-name'>Full Name</label>
                         <input className='contact-form-input' id='contact-email-address' placeholder='Email Address' type='email' name='email' required/>
                         <label htmlFor='email' className='contact-form-label-email'>Email Address</label>
@@ -66,7 +73,7 @@ function Contact() {
                 </a>
             </div>
             <h1>Leave me a message:</h1>
-                <form id='contact-form' onSubmit={handleOutOfService}>
+                <form id='contact-form' onSubmit={handleSendMessage}>
                     <input className='contact-form-input' id='contact-full-name' placeholder='Full Name' type='text' name='name' required/>
                     <label htmlFor='name' className='contact-form-label-name'>Full Name</label>
                     <input className='contact-form-input' id='contact-email-address' placeholder='Email Address' type='email' name='email' required/>
