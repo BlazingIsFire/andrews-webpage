@@ -8,32 +8,42 @@ import Contact from './pages/Contact';
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
+import { AuthProvider } from './contexts/AuthContext';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
 
   return (
     <>
-    <Navbar />
+    <AuthProvider>
+      <Navbar />
       <div className='homepage-container-web'>
-          <Routes>
-              <Route>
-                <Route path='/' element={<Homepage />}/>
-              </Route>
-              <Route path='/contact' element={<Contact />}/>
-              <Route path='/login' element={<Login />}/>
-              <Route path='/register' element={<Register />}/>
-          </Routes>
+        <Routes>
+          {/* Public Routes */}
+          <Route path='/' element={<Homepage />}/>
+          <Route path='contact' element={<Contact />}/>
+          <Route path='login' element={<Login />}/>
+          <Route path='register' element={<Register />}/>
+          <Route path='*' element={<p>No path resolved!</p>} />
+          {/* Private/Protected Routes */}
+          <Route element={<PrivateRoute />}>
+            <Route path='dashboard' element={<Dashboard/>}/>
+          </Route>
+        </Routes>
       </div>
-    <div className='homepage-container-devices'>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />}/>
-        <Route path='/projects' element={<Projects />}/>
-        <Route path='/contact' element={<Contact />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/register' element={<Register />}/>
-      </Routes>
-    </div>
+      <div className='homepage-container-devices'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />}/>
+          <Route path='/projects' element={<Projects />}/>
+          <Route path='/contact' element={<Contact />}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/register' element={<Register />}/>
+        </Routes>
+      </div>
+    </AuthProvider>
+    
     </>
   );
 }
