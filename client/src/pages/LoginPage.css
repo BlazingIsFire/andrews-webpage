@@ -21,7 +21,7 @@ Start of Login Page
 }
 .login-page-box{
     width: 400px;
-    height: 400px;
+    height: auto;
     margin-top: 60px;
     padding: 20px;
     display: flex;
@@ -175,7 +175,8 @@ Login Form register buttons
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
 }
 .login-page-box-register h3{
     color: #f3c430;
@@ -199,6 +200,22 @@ Login Form register buttons
     transform: rotate(4deg);
     color: #000;
     background: #f3c430;
+}
+
+/*
+===========================================================
+Login Error Label
+=========================================================== 
+*/
+
+.login-error-label{
+    background-color: rgb(255, 0, 0, .3);
+    color: rgb(255, 0, 0);
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: Carter One;
+    text-align: center;
+    border: 2px solid rgb(255, 0, 0);
 }
 
 /*
