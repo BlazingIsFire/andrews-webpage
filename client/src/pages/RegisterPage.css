@@ -199,6 +199,21 @@ Submit button
     color: #000;
     background: #f3c430;
 }
+/*
+===========================================================
+Register Error Label
+=========================================================== 
+*/
+
+.register-error-label{
+    background-color: rgb(255, 0, 0, .3);
+    color: rgb(255, 0, 0);
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: Carter One;
+    text-align: center;
+    border: 2px solid rgb(255, 0, 0);
+}
 
 /*
 ===========================================================
