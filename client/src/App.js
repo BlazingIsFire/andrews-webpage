@@ -28,7 +28,7 @@ function App() {
           <Route path='*' element={<p>No path resolved!</p>} />
           {/* Private/Protected Routes */}
           <Route element={<PrivateRoute />}>
-            <Route path='dashboard' element={<Dashboard/>}/>
+            <Route path='dashboard' element={<Dashboard/>}/> {/*TODO: Fix React warning of "/dashboard" not a route*/}
           </Route>
         </Routes>
       </div>
