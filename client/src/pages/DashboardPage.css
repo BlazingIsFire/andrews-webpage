@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+/* 
+===========================================================
+Start of Dashboard Page
+===========================================================
+*/
+
+.account-dashboard-container-web{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.account-dashboard-container-web h1{
+    font-family: Luckiest Guy;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    font-size: 40px;
+    color: #f3c430;
+    -webkit-text-stroke: 1px #000;
+}
+
+.dashboard-page-box{
+    width: 800px;
+    height: 375px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px #000;
+    background-color: #fff;
+}
+/* 
+===========================================================
+Start of Profile image section
+===========================================================
+*/
+.dashboard-box-left{
+    width: 50%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.account-profile-img{
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 #000;
+}
+.upload-img-buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.dashboard-box-left input[type="File"]{
+    display: none;
+}
+.account-file-upload-input{
+    padding: 1vh;
+    margin: 4px;
+    font-size: 16px;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.account-file-upload-input:hover {
+    scale: 1.1;
+    background-color: #f3c430;
+}
+.account-file-submit-btn{
+    padding: 1vh;
+    margin: 4px;
+    font-size: 16px;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.account-file-submit-btn:hover {
+    scale: 1.1;
+    background-color: green;
+}
+#imageStatus-display{
+    color: green;
+    font-family: Carter One;
+}
+#fileUploadError-display{
+    color: #ff0000;
+    font-family: Carter One;
+}
+
+/* 
+===========================================================
+Start of Account information section
+===========================================================
+*/
+#dashboard-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.dashboard-box-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.account-input{
+    width: 250px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Carter One;
+    background-color: rgb(0, 0, 0, .25);
+}
+.account-input-label{
+    display: block;
+    font-size: 16px;
+    margin: 0;
+    font-family: Carter One;
+    z-index: 1;
+}
+.account-update-btn{
+    padding: 1vh;
+    font-size: 16px;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.account-update-btn:hover {
+    scale: 1.1;
+    background-color: green;
+}
+.dashboard-box-right h4{
+    color: green;
+    font-family: Carter One;
+}
+/* 
+===========================================================
+Start of Change Password / Verify Email
+===========================================================
+*/
+.account-update-btn-bottom{
+    padding: 1vh;
+    margin: 4px;
+    font-size: 16px;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.account-update-btn-bottom:hover {
+    scale: 1.1;
+    background-color: #f3c430;
+}
+
+/* 
+===========================================================
+Start of Modals
+===========================================================
+*/
+.email-modal-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color: rgb(0, 0, 0, .5);
+}
+.display-none{
+    display: none;
+}
+.email-modal-box{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    background-color: #fff;
+}
+.email-modal-box h1{
+    color: #f3c430;
+    margin: 0;
+    -webkit-text-stroke: 1px #000;
+    font-family: Carter One;
+}
+.email-modal-box h4{
+    font-family: Carter One;
+}
+.email-modal-close-btn{
+    padding: 1vh;
+    margin: 4px;
+    font-size: 16px;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.email-modal-close-btn:hover {
+    scale: 1.1;
+    background-color: #ff0000;
+}
+
+.password-reset-modal-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color: rgb(0, 0, 0, .5);
+}
+.password-reset-modal-box{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    background-color: #fff;
+}
+.password-reset-modal-box h1{
+    color: #f3c430;
+    margin: 0;
+    -webkit-text-stroke: 1px #000;
+    font-family: Carter One;
+}
+.password-reset-modal-box h4{
+    font-family: Carter One;
+}
+.password-reset-modal-close-btn{
+    padding: 1vh;
+    margin: 4px;
+    font-size: 16px;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.password-reset-modal-close-btn:hover {
+    scale: 1.1;
+    background-color: #ff0000;
+}
