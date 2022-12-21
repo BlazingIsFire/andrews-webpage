@@ -108,6 +108,21 @@ Start of Profile image section
     color: #ff0000;
     font-family: Carter One;
 }
+#account-logout-btn{
+    padding: 1vh;
+    margin: 4px;
+    min-width: 200px;
+    font-size: 16px;
+    font-family: Carter One;
+    border: 2px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+#account-logout-btn:hover {
+    scale: 1.1;
+    background-color: #ff0000;
+}
 
 /* 
 ===========================================================
