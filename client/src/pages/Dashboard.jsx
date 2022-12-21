@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
+import '../App.css';
 import './DashboardPage.css';
 import { auth, storage } from '../firebase';
 import { uploadBytes, ref, getDownloadURL } from "firebase/storage";
-import { sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
+import { sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from "firebase/auth";
 import { useAuth } from "../contexts/AuthContext";
 import UserPNG from '../images/user.png';
-import '../App.css';
 
 function Dashboard() {
     // Auth context
@@ -17,7 +17,6 @@ function Dashboard() {
     const [profileImageUpload, setProfileImageUpload] = useState();
     const [status, setStatus] = useState('');
     const [imageStatus, setImageStatus] = useState('');
-    const [profileImageURL, setProfileImageURL] = useState(null);
     const [fileUploadName, setFileUploadName] = useState('No file selected.');
     const [fileUploadError, setFileUploadError] = useState('');
     // All ref variables
@@ -41,10 +40,9 @@ function Dashboard() {
             await uploadBytes(profileImagesStorageRef, profileImageUpload)
             .then(async (snapshot) =>{
                 await getDownloadURL(profileImagesStorageRef).then(async (url) =>{
-                    setProfileImageURL(url);
                     setProfileImg(url);
                     await updateProfile(currentUser, {
-                        photoURL: profileImageURL
+                        photoURL: url
                     }).then(() =>{
                         return setImageStatus('Profile Image Updated!')
                     }).catch((updateError) =>{
@@ -92,13 +90,23 @@ function Dashboard() {
         })
     }
 
+    // Log out of account
+    const handleLogOut = () =>{
+        signOut(auth)
+            .then(() =>{
+                console.log('Signed out.')
+            }).catch((error) =>{
+                console.log(error.code + ' Error to sign out user.')
+            })
+    }
+
     return(
         <>
         <div className='account-dashboard-container-web'>
             <h1>Account Dashboard:</h1>
             <div className="dashboard-page-box">
                 <div className="dashboard-box-left">
-                    <img className="account-profile-img" src={profileImg  ? profileImg : UserPNG} alt='Profile Display'/>
+                    <img className="account-profile-img" src={profileImg === null ? UserPNG : profileImg} alt='Profile Display'/>
                     <div className="upload-img-buttons-container">
                         <label className="account-file-upload-input">Upload file
                             <input ref={accountFileUploadRef} type='file' accept=".png, .jpg, .jpeg" onChange={handleFileUploadInput}/>
@@ -108,6 +116,7 @@ function Dashboard() {
                     {fileUploadName}
                     <h4 className={imageStatus ? imageStatus : 'display-none'} id="imageStatus-display">{imageStatus}</h4>
                     <h4 className={fileUploadError ? fileUploadError : 'display-none'} id="fileUploadError-display">{fileUploadError}</h4>
+                    <button id="account-logout-btn" onClick={handleLogOut}>Log out</button>
                 </div>
                 <div className="dashboard-box-right">
                     <form id='dashboard-form' onSubmit={handleUpdateAccountForm}>
