@@ -13,6 +13,7 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
     const { pathname } = useLocation();
 
+    // Auth state changing effect
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) =>{
             setCurrentUser(user);
@@ -22,6 +23,7 @@ export function AuthProvider({ children }) {
         return unsubscribe;
     }, [pathname])
 
+    // value for AuthProvider
     const value = {
         currentUser
     }
