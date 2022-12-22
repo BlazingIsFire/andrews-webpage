@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import '../App.css';
 import './DashboardPage.css';
-import { auth, storage } from '../firebase';
+import { auth, storage, db } from '../firebase';
 import { uploadBytes, ref, getDownloadURL } from "firebase/storage";
 import { sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from "firebase/auth";
+import { doc, updateDoc } from "firebase/firestore";
 import { useAuth } from "../contexts/AuthContext";
 import UserPNG from '../images/user.png';
 
@@ -20,9 +21,10 @@ function Dashboard() {
     const [fileUploadName, setFileUploadName] = useState('No file selected.');
     const [fileUploadError, setFileUploadError] = useState('');
     // All ref variables
-    const accountFileUploadRef = useRef();
     const usernameRef = useRef();
+    const accountFileUploadRef = useRef();
     const profileImagesStorageRef = ref(storage, `profileImages/${currentUser.uid}-image.png`);
+    const userCollectionDataRef = doc(db, "users", `${currentUser.uid}`);
 
     // Load uploaded file name function
     const handleFileUploadInput = (e) => {
@@ -43,7 +45,10 @@ function Dashboard() {
                     setProfileImg(url);
                     await updateProfile(currentUser, {
                         photoURL: url
-                    }).then(() =>{
+                    }).then(async () =>{
+                        await updateDoc(userCollectionDataRef, {
+                            profileImageURL: url
+                        })
                         return setImageStatus('Profile Image Updated!')
                     }).catch((updateError) =>{
                         return console.log(updateError.code + ' Error updating profile.')
@@ -83,7 +88,10 @@ function Dashboard() {
         e.preventDefault();
         await updateProfile(currentUser, {
             displayName: usernameRef.current.value
-        }).then(()=>{
+        }).then(async ()=>{
+            await updateDoc(userCollectionDataRef, {
+                displayName: usernameRef.current.value
+            })
             return setStatus('Username updated!')
         }).catch((error) =>{
             return console.log(error);
@@ -138,6 +146,7 @@ function Dashboard() {
             <div className="email-modal-box">
                 <h1>Verification Email sent to:</h1>
                 <h4>{currentUser.email}</h4>
+                <h5>NOTE: Check your spam inbox!</h5>
                 <button className="email-modal-close-btn" onClick={() =>{setEmailModal(false)}}>Close</button>
             </div>
         </div>
@@ -145,6 +154,7 @@ function Dashboard() {
             <div className="password-reset-modal-box">
                 <h1>Password Reset Email sent to:</h1>
                 <h4>{currentUser.email}</h4>
+                <h5>NOTE: Check your spam inbox!</h5>
                 <button className="password-reset-modal-close-btn" onClick={() =>{setPasswordResetModal(false)}}>Close</button>
             </div>
         </div>
