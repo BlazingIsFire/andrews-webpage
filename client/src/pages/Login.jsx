@@ -70,7 +70,10 @@ function Login() {
                     <label htmlFor='email' id='email-label'>Email Address</label>
                     <input ref={passwordRef} className='login-form-input' id='login-password' type='password' placeholder='Password' name='password' required/>
                     <label htmlFor='password' id='password-label'>Password</label>
-                    <input disabled={loading} className='login-form-submit-btn' type='submit' value='Sign In' />
+                    <div>
+                        <input disabled={loading} className='login-form-submit-btn' type='submit' value='Sign In' />
+                        <input type='button' id='login-page-forgot-pwd-btn' onClick={() =>{navigate('/forgotpassword')}} value='Forgot Password'/>
+                    </div>
                     {error && <label className='login-error-label'>{error}</label>}
                 </form>
                 <div className='login-page-box-register'>
