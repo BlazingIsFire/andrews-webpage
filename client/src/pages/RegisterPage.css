@@ -21,7 +21,7 @@ Start of Register Page
 }
 .register-page-box{
     width: 400px;
-    height: 400px;
+    height: auto;
     margin-top: 60px;
     padding: 20px;
     display: flex;
@@ -103,39 +103,6 @@ confirmPassword label
     font-size: 15px;
 }
 
-/*
-=============================
-Username label 
-=============================
-*/
-/* #register-username-label{
-    position: absolute;
-    display: block;
-    top: 0px;
-    left: 48px;
-    font-size: 20px;
-    transition: .2s;
-    z-index: 0;
-}
-#register-username::placeholder{
-    opacity: 1;
-    color: transparent;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
-.register-form-input:focus + #register-username-label{
-    color: #f3c430;
-    position: absolute;
-    top: -12px;
-    left: 48px;
-    font-size: 15px;
-    transition: .2s;
-}
-.register-form-input:valid + #register-username-label{
-    top: -12px;
-    color: #000;
-    font-size: 15px;
-} */
 /*
 =============================
 Email Address label 
@@ -242,6 +209,7 @@ Register Error Label
     background-color: rgb(255, 0, 0, .3);
     color: rgb(255, 0, 0);
     padding: 1rem;
+    margin-bottom: 8px;
     border-radius: 5px;
     font-family: Carter One;
     text-align: center;

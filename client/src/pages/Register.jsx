@@ -98,7 +98,7 @@ function Register() {
                     <input className='register-form-submit-btn' type='submit' value='Register Now' disabled={loading} />
                     {error && <label className='register-error-label'>{error}</label>}
                 </form>
-                <div className='login-page-box-route'>
+                <div className={`${error ? 'display-none' : 'login-page-box-route'}`}>
                     <h3>Already have an account?</h3>
                     <Link to='/login'><button id='login-page-route-btn'>Login Now</button></Link>
                     <h4 onClick={()=>{setInfoModal(true)}}>Why do I need an account?</h4>
