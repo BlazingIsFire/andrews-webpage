@@ -76,6 +76,7 @@ Start of Profile image section
     padding: 1vh;
     margin: 4px;
     font-size: 16px;
+    color: #000;
     font-family: Carter One;
     border: 2px solid #000;
     border-radius: 10px;
@@ -91,6 +92,7 @@ Start of Profile image section
     margin: 4px;
     font-size: 16px;
     font-family: Carter One;
+    color: #000;
     border: 2px solid #000;
     border-radius: 10px;
     cursor: pointer;
@@ -115,6 +117,7 @@ Start of Profile image section
     min-width: 200px;
     font-size: 16px;
     font-family: Carter One;
+    color: #000;
     border: 2px solid #000;
     border-radius: 10px;
     cursor: pointer;
@@ -165,7 +168,9 @@ Start of Account information section
 .account-update-btn{
     padding: 1vh;
     font-size: 16px;
+    color: #000;
     font-family: Carter One;
+    background-color: transparent;
     border: 2px solid #000;
     border-radius: 10px;
     cursor: pointer;
@@ -191,6 +196,7 @@ Start of Change Password / Verify Email
     font-size: 16px;
     font-family: Carter One;
     border: 2px solid #000;
+    color: #000;
     border-radius: 10px;
     cursor: pointer;
     transition: all .2s ease;
@@ -316,7 +322,7 @@ Start of Modals
 
 @media only screen and (max-width: 1024px){
     .account-dashboard-container-web{
-        margin-top: 3rem;
+        margin-top: 7rem;
     }
     .account-dashboard-container-web h1{
         margin-top: 0;
@@ -350,23 +356,23 @@ Start of Modals
         text-align: center;
     }
 }
-@media only screen and (max-width: 600px){
+/* @media only screen and (max-width: 600px){
     .account-dashboard-container-web{
-        margin-top: 0;
+        margin-top: 12rem;
     }
 }
 @media only screen and (max-width: 400px){
     .account-dashboard-container-web{
-        margin-top: 3rem;
+        margin-top: 12rem;
     }
 }
 @media only screen and (max-width: 375px){
     .account-dashboard-container-web{
-        margin-top: 8rem;
+        margin-top: 12rem;
     }
 }
 @media only screen and (max-width: 360px){
     .account-dashboard-container-web{
-        margin-top: 4.5rem;
+        margin-top: 12rem;
     }
-}
+} */
