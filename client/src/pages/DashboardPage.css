@@ -101,6 +101,7 @@ Start of Profile image section
     background-color: green;
 }
 #imageStatus-display{
+    margin: 0;
     color: green;
     font-family: Carter One;
 }
@@ -175,6 +176,7 @@ Start of Account information section
     background-color: green;
 }
 .dashboard-box-right h4{
+    margin: 0;
     color: green;
     font-family: Carter One;
 }
@@ -234,7 +236,11 @@ Start of Modals
     font-family: Carter One;
 }
 .email-modal-box h4{
+    color: green;
     font-family: Carter One;
+}
+.email-modal-box h5{
+    margin: 4px;
 }
 .email-modal-close-btn{
     padding: 1vh;
@@ -279,7 +285,11 @@ Start of Modals
     font-family: Carter One;
 }
 .password-reset-modal-box h4{
+    color: green;
     font-family: Carter One;
+}
+.password-reset-modal-box h5{
+    margin: 4px;
 }
 .password-reset-modal-close-btn{
     padding: 1vh;
@@ -294,4 +304,67 @@ Start of Modals
 .password-reset-modal-close-btn:hover {
     scale: 1.1;
     background-color: #ff0000;
+}
+
+/*
+===========================================================
+@Media's for devices
+=========================================================== 
+*/
+
+@media only screen and (max-width: 1024px){
+    .account-dashboard-container-web{
+        margin-top: 3rem;
+    }
+    .account-dashboard-container-web h1{
+        margin-top: 0;
+        max-width: 250px;
+        text-align: center;
+    }
+    .dashboard-page-box{
+        width: 80%;
+        height: fit-content;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .dashboard-box-left{
+        width: 100%;
+    }
+    .dashboard-box-right{
+        width: 100%;
+    }
+    .email-modal-box{
+        width: 80%;
+    }
+    .email-modal-box h1{
+        text-align: center;
+    }
+    .password-reset-modal-box{
+        width: 80%;
+    }
+    .password-reset-modal-box h1{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px){
+    .account-dashboard-container-web{
+        margin-top: 0;
+    }
+}
+@media only screen and (max-width: 400px){
+    .account-dashboard-container-web{
+        margin-top: 3rem;
+    }
+}
+@media only screen and (max-width: 375px){
+    .account-dashboard-container-web{
+        margin-top: 8rem;
+    }
+}
+@media only screen and (max-width: 360px){
+    .account-dashboard-container-web{
+        margin-top: 4.5rem;
+    }
 }
