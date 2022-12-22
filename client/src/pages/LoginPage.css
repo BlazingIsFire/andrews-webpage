@@ -201,6 +201,26 @@ Login Form register buttons
     color: #000;
     background: #f3c430;
 }
+#login-page-forgot-pwd-btn{
+    width: 150px;
+    height: 48px;
+    font-size: 16px;
+    padding: 6px;
+    margin-left: 4px;
+    font-family: Carter One;
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 20px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+#login-page-forgot-pwd-btn:hover{
+    scale: 1.1;
+    transform: rotate(4deg);
+    color: #000;
+    background: #f3c430;
+}
 
 /*
 ===========================================================
