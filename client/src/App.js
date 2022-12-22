@@ -11,6 +11,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
+import ForgotPassword from './pages/ForgotPassword';
 
 function App() {
 
@@ -25,21 +26,28 @@ function App() {
           <Route path='contact' element={<Contact />}/>
           <Route path='login' element={<Login />}/>
           <Route path='register' element={<Register />}/>
+          <Route path='forgotpassword' element={<ForgotPassword />}/>
           <Route path='*' element={<p>No path resolved!</p>} />
           {/* Private/Protected Routes */}
           <Route element={<PrivateRoute />}>
-            <Route path='dashboard' element={<Dashboard/>}/> {/*TODO: Fix React warning of "/dashboard" not a route*/}
+            <Route path='dashboard' element={<Dashboard/>}/>
           </Route>
         </Routes>
       </div>
       <div className='homepage-container-devices'>
         <Routes>
+          {/* Public Routes */}
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />}/>
-          <Route path='/projects' element={<Projects />}/>
-          <Route path='/contact' element={<Contact />}/>
-          <Route path='/login' element={<Login />}/>
-          <Route path='/register' element={<Register />}/>
+          <Route path='about' element={<About />}/>
+          <Route path='projects' element={<Projects />}/>
+          <Route path='contact' element={<Contact />}/>
+          <Route path='login' element={<Login />}/>
+          <Route path='register' element={<Register />}/>
+          <Route path='forgotpassword' element={<ForgotPassword />}/>
+          {/* Private/Protected Routes */}
+          <Route element={<PrivateRoute />}>
+            <Route path='dashboard' element={<Dashboard/>}/>
+          </Route>
         </Routes>
       </div>
     </AuthProvider>
