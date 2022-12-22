@@ -1,23 +1,36 @@
 import '../App.css';
 import './RegisterPage.css';
 import { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase';
+import { useNavigate, Link } from 'react-router-dom';
+import { auth, usersCollectionRef } from '../firebase';
+import { doc, setDoc } from 'firebase/firestore';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 function Register() {
+    // All useRef's
     const emailRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
+
+    // All useStates
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const [infoModal, setInfoModal] = useState(false);
     const navigate = useNavigate();
 
+    // User sign up function
     const firebaseSignUp = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
+                const user = userCredential.user;
                 setError('');
                 setLoading(true);
+                setDoc(doc(usersCollectionRef, `${user.uid}`), {
+                    emailAddress: user.email,
+                    displayName: user.displayName,
+                    emailVerified: user.emailVerified,
+                    profileImageURL: user.photoURL
+                })
                 return navigate('/dashboard');
             })
             .catch((firebaseError) => {
@@ -39,6 +52,7 @@ function Register() {
             })
     }
 
+    // Register form function, checks password
     const handleRegister = async (e) =>{
         e.preventDefault()
         if(passwordRef.current.value !== passwordConfirmRef.current.value){
@@ -84,6 +98,18 @@ function Register() {
                     <input className='register-form-submit-btn' type='submit' value='Register Now' disabled={loading} />
                     {error && <label className='register-error-label'>{error}</label>}
                 </form>
+                <div className='login-page-box-route'>
+                    <h3>Already have an account?</h3>
+                    <Link to='/login'><button id='login-page-route-btn'>Login Now</button></Link>
+                    <h4 onClick={()=>{setInfoModal(true)}}>Why do I need an account?</h4>
+                </div>
+            </div>
+        </div>
+        <div className={`${infoModal ? 'info-modal-container' : 'display-none'}`}>
+            <div className="info-modal-box">
+                <h1>Why do you need an account?</h1>
+                <p>I figured people would ask the above question... that's why I made this modal. All of my applications, that require a database, require you to create an account here. This is because all my applications are connected. So instead of you creating 10 different accounts for different projects of mine or applications, you only have to create one.</p>
+                <button onClick={()=>{setInfoModal(false)}}>Close</button>
             </div>
         </div>
         </>
