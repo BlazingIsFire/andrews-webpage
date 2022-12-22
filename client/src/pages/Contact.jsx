@@ -2,17 +2,24 @@ import '../App.css';
 import './ContactPage.css';
 import emailjs from 'emailjs-com';
 import contactvcf from './contactvcf.vcf';
+import { useEffect } from 'react';
 import { ReactComponent as PhoneSVG } from '../images/phone.svg';
 import { ReactComponent as MailSVG } from '../images/mail.svg';
 
 function Contact() {
 
+    // Sends forms message to email api
     const handleSendMessage = (e) =>{
         e.preventDefault();
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_NAME, e.target, process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
         e.target.reset();
         alert('Message has been sent!');
     }
+
+    // sets page title
+    useEffect(() =>{
+        document.title = 'Andrew Schweitzer | Contact'
+    }, [])
 
     // const handleOutOfService = () =>{
     //     alert('Sorry, this service is temporarily unavailable. Please check back soon!');

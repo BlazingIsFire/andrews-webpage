@@ -7,13 +7,17 @@ import { useAuth } from '../contexts/AuthContext';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function Login() {
+    // All useRefs
     const emailRef = useRef();
     const passwordRef = useRef();
+    // All useStates
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    // Misc.
     const { currentUser } = useAuth();
     const navigate = useNavigate();
 
+    // Firebase signin function
     const firebaseSignIn = (email, password) =>{
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -37,6 +41,7 @@ function Login() {
             })
     }
 
+    // Login function
     const handleLogin = async (e) =>{
         e.preventDefault()
         try{
@@ -47,11 +52,12 @@ function Login() {
         setLoading(false);
     }
 
+    // checks if a user is already authenticated and sets page title
     useEffect(() =>{
         if(currentUser){
             navigate('/dashboard');
         } else {
-            return undefined;
+            document.title = 'Andrew Schweitzer | Login';
         }
     })
 
@@ -72,7 +78,7 @@ function Login() {
                     <label htmlFor='password' id='password-label'>Password</label>
                     <div>
                         <input disabled={loading} className='login-form-submit-btn' type='submit' value='Sign In' />
-                        <input type='button' id='login-page-forgot-pwd-btn' onClick={() =>{navigate('/forgotpassword')}} value='Forgot Password'/>
+                        <input type='button' id='forgot-password-btn' onClick={() =>{navigate('/forgotpassword')}} value='Forgot Password'/>
                     </div>
                     {error && <label className='login-error-label'>{error}</label>}
                 </form>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import '../App.css';
 import './DashboardPage.css';
 import { auth, storage, db } from '../firebase';
@@ -107,6 +107,11 @@ function Dashboard() {
                 console.log(error.code + ' Error to sign out user.')
             })
     }
+
+    // sets page title
+    useEffect(() =>{
+        document.title = 'Andrew Schweitzer | Dashboard'
+    }, [])
 
     return(
         <>

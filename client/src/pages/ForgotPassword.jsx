@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import '../App.css';
 import './ForgotPassword.css';
 import { Link } from 'react-router-dom';
@@ -6,11 +6,14 @@ import { auth } from '../firebase';
 import { sendPasswordResetEmail } from 'firebase/auth';
 
 function ForgotPassword() {
+    // All useRefs
     const emailRef = useRef();
+    // All useStates
     const [emailSent, setEmailSent] = useState(false);
     const [emailStatus, setEmailStatus] = useState('');
     const [error, setError] = useState('');
 
+    // Firebase password reset email function
     const firebasePasswordReset = (auth, email) =>{
         sendPasswordResetEmail(auth, email)
             .then(()=>{
@@ -30,6 +33,7 @@ function ForgotPassword() {
             })
     }
 
+    // sends forgot password to email
     const handleForgotPassword = async (e) =>{
         e.preventDefault()
         try{
@@ -38,6 +42,12 @@ function ForgotPassword() {
             return error;
         }
     }
+
+    // Sets page title
+    useEffect(() =>{
+        document.title = 'Andrew Schweitzer | Forgot Password'
+    }, [])
+    
   return (
     <div className='password-reset-page-container'>
             <div className='password-reset-page-box'>

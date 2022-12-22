@@ -1,6 +1,6 @@
 import '../App.css';
 import './RegisterPage.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { auth, usersCollectionRef } from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
@@ -71,6 +71,11 @@ function Register() {
         }
         setLoading(false);
     }
+
+    // Sets page title
+    useEffect(() =>{
+        document.title = 'Andrew Schweitzer | Register'
+    }, [])
 
     // -- Out of service alert when in development. --
     // const handleOutOfService = () =>{
