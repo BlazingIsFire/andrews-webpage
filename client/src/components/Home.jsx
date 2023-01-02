@@ -21,8 +21,8 @@ function Home() {
                 <h4 className='homepage-introduction'>Hi, my name is</h4>
                 <h1 className='homepage-title'>Andrew Schweitzer</h1>
                 <div className='homepage-subtitle-container'>
-                <h3 className='homepage-subtitle'>I'm a</h3>
-                <TextTransition className='homepage-subtitle homepage-subtitle-texts' springConfig={presets.gentle}>{subtitleText[subtitleIndex % subtitleText.length]}</TextTransition>
+                    <h3 className='homepage-subtitle'>I'm a</h3>
+                    <TextTransition className='homepage-subtitle homepage-subtitle-texts' springConfig={presets.gentle}>{subtitleText[subtitleIndex % subtitleText.length]}</TextTransition>
                 </div>
             </div>
             <div className='homepage-rightblock'>
