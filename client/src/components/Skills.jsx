@@ -53,7 +53,7 @@ function Skills() {
                         <img src={ReactLogo} alt='ReactJS Logo' className='skills-logo'/>
                         <div className='progress'>
                             <div className='progress-bar' id='react-data-set'>
-                                <span>77%</span>
+                                <span>80%</span>
                             </div>
                         </div>
                     </div>
