@@ -434,7 +434,7 @@ Start of About Section
     width: 60%;
 }
 #react-data-set{
-    width: 77%;
+    width: 80%;
 }
 #js-data-set{
     width: 85%;
@@ -452,7 +452,7 @@ Start of About Section
 .progress-bar span{
     position: absolute;
     left: 35%;
-    top: 0px;
+    top: -3.5px;
     font-weight: 700;
     color: #000;
 }
