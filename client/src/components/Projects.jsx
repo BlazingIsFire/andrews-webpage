@@ -8,7 +8,27 @@ function Projects() {
         <div className='projects-container-web' id='projects'>
             <h1 className='projects-title'>Noteworthy Projects:</h1>
             <div className='projects-panel-container'>
-            <div className='projects-panel'>
+                <div className='projects-panel'>
+                    <div className='projects-panel-head'>
+                        <FolderSVG id='projects-folder'/>
+                        <div id='projects-head-end'>
+                            <a href='https://github.com/BlazingIsFire/GitFinder' target='_blank' rel='noreferrer'>
+                                <GithubLogo id='projects-github' title='Github'/>
+                            </a>
+                        </div>
+                    </div>
+                    <div className='projects-panel-content'>
+                        <h2>GitFinder</h2>
+                        <p>GitFinder uses Github's API to find a user's profile and display the information of the user.</p>
+                        <a href='https://gitfinder.andrewschweitzer.tech' target='_blank' rel='noreferrer'>Live Demo</a>
+                    </div>
+                    <div className='projects-panel-endtags'>
+                        <h4>Axios</h4>
+                        <h4>Javascript</h4>
+                        <h4>React</h4>
+                    </div>
+                </div>
+                <div className='projects-panel'>
                     <div className='projects-panel-head'>
                         <FolderSVG id='projects-folder'/>
                         <div id='projects-head-end'>
@@ -74,7 +94,27 @@ function Projects() {
         <div className='projects-container-mobile'>
             <h1 className='projects-title'>Noteworthy Projects:</h1>
                 <div className='projects-panel-container'>
-                <div className='projects-panel'>
+                    <div className='projects-panel'>
+                        <div className='projects-panel-head'>
+                            <FolderSVG id='projects-folder'/>
+                            <div id='projects-head-end'>
+                                <a href='https://github.com/BlazingIsFire/GitFinder' target='_blank' rel='noreferrer'>
+                                    <GithubLogo id='projects-github' title='Github'/>
+                                </a>
+                            </div>
+                        </div>
+                        <div className='projects-panel-content'>
+                            <h2>GitFinder</h2>
+                            <p>GitFinder uses Github's API to find a user's profile and display the information of the user.</p>
+                            <a href='https://gitfinder.andrewschweitzer.tech' target='_blank' rel='noreferrer'>Live Demo</a>
+                        </div>
+                        <div className='projects-panel-endtags'>
+                            <h4>Axios</h4>
+                            <h4>Javascript</h4>
+                            <h4>React</h4>
+                        </div>
+                    </div>
+                    <div className='projects-panel'>
                         <div className='projects-panel-head'>
                             <FolderSVG id='projects-folder'/>
                             <div id='projects-head-end'>

@@ -482,9 +482,8 @@ Start of Projects Section
 .projects-container-mobile{
     z-index: 0;
     position: relative;
-    height: stretch;
     width: 100%;
-    padding-top: 174px;
+    padding-top: 5rem;
     display: none;
     flex-direction: column;
     justify-content: center;
