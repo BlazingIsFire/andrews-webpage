@@ -78,6 +78,9 @@ function Contact() {
                 <a href={contactvcf} download='Andrew_Schweitzer'>
                     <button id='vcf-btn'>Download Contact Card</button>
                 </a>
+                <a href='https://github.com/BlazingIsFire' target='_blank' rel='noreferrer'>
+                    <button id='vcf-btn'>GitHub Profile</button>
+                </a>
             </div>
             <h1>Leave me a message:</h1>
                 <form id='contact-form' onSubmit={handleSendMessage}>

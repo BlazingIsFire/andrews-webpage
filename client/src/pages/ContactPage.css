@@ -251,7 +251,7 @@ Form labels / Subject
 .contact-form-label-subject{
     position: absolute;
     display: block;
-    top: 120px;
+    top: 114px;
     left: 4px;
     font-size: 20px;
     transition: .2s;
@@ -266,14 +266,14 @@ Form labels / Subject
 .contact-form-input:focus + .contact-form-label-subject{
     color: #f3c430;
     position: absolute;
-    top: 102px;
+    top: 98px;
     left: 4px;
     display: block;
     font-size: 15px;
     transition: .2s;
 }
 .contact-form-input:valid + .contact-form-label-subject{
-    top: 102px;
+    top: 98px;
     color: #000;
     font-size: 15px;
 }
