@@ -1,5 +1,6 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
+import { ReactComponent as GithubLogo } from '../images/github.svg';
 import { ReactComponent as LinkedInLogo } from '../images/linkedin.svg';
 
 function ContactMe() {
@@ -10,8 +11,11 @@ function ContactMe() {
             <div className='contact-box'>
                 <h1>Want to connect?</h1>
                 <Link to='/contact'><button id='contact-me-btn'>Contact Me </button></Link>
-                <a href='https://www.linkedin.com/in/andrew-schweitzer-48b06b23a/'>
+                <a href='https://www.linkedin.com/in/andrew-schweitzer-48b06b23a/' target='_blank' rel='noreferrer'>
                     <LinkedInLogo title='LinkedIn Profile' id='linkedinprofile-svg'/>
+                </a>
+                <a href='https://github.com/BlazingIsFire' target='_blank' rel='noreferrer'>
+                    <GithubLogo title='GitHub Profile' id='githubprofile-svg' />
                 </a>
             </div>
             <div className='contact-container-footer'>
