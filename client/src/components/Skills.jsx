@@ -9,7 +9,7 @@ import CSS3Logo from '../images/css3.png';
 import GitLogo from '../images/git.png';
 import ReactLogo from '../images/react.png';
 import JsLogo from '../images/javascript.png';
-import NodeJsLogo from '../images/node-js.png';
+import PythonLogo from '../images/python.png';
 import AwsLogo from '../images/amazon-aws.png';
 import LinuxLogo from '../images/linux.png';
 
@@ -27,7 +27,7 @@ function Skills() {
                         <img src={HtmlLogo} alt='HTML5 Logo' className='skills-logo'/>
                         <div className='progress'>
                             <div className='progress-bar' id='html-data-set'>
-                                <span>75%</span>
+                                <span>90%</span>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ function Skills() {
                         <img src={CSS3Logo} alt='CSS5 Logo' className='skills-logo'/>
                         <div className='progress'>
                             <div className='progress-bar' id='css-data-set'>
-                                <span>65%</span>
+                                <span>85%</span>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ function Skills() {
                         <img src={GitLogo} alt='Git Logo' className='skills-logo'/>
                         <div className='progress'>
                             <div className='progress-bar' id='git-data-set'>
-                                <span>60%</span>
+                                <span>70%</span>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ function Skills() {
                         <img src={ReactLogo} alt='ReactJS Logo' className='skills-logo'/>
                         <div className='progress'>
                             <div className='progress-bar' id='react-data-set'>
-                                <span>80%</span>
+                                <span>90%</span>
                             </div>
                         </div>
                     </div>
@@ -68,10 +68,10 @@ function Skills() {
                 </div>
                 <div className='skills-objects-end'>
                     <div className='skills-large-container' id='node-container'>
-                        <img src={NodeJsLogo} alt='NodeJS Logo' className='skills-logo'/>
+                        <img src={PythonLogo} alt='Python Logo' className='skills-logo'/>
                         <div className='progress'>
-                            <div className='progress-bar' id='node-data-set'>
-                                <span>35%</span>
+                            <div className='progress-bar' id='python-data-set'>
+                                <span>70%</span>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ function Skills() {
                         <img src={AwsLogo} alt='AWS Logo' className='skills-logo'/>
                         <div className='progress'>
                             <div className='progress-bar' id='aws-data-set'>
-                                <span>45%</span>
+                                <span>55%</span>
                             </div>
                         </div>
                     </div>

@@ -425,25 +425,25 @@ Start of About Section
 }
 
 #html-data-set{
-    width: 75%;
+    width: 90%;
 }
 #css-data-set{
-    width: 65%;
+    width: 85%;
 }
 #git-data-set{
-    width: 60%;
+    width: 70%;
 }
 #react-data-set{
-    width: 80%;
+    width: 90%;
 }
 #js-data-set{
     width: 85%;
 }
-#node-data-set{
-    width: 35%;
+#python-data-set{
+    width: 70%;
 }
 #aws-data-set{
-    width: 45%;
+    width: 55%;
 }
 #linux-data-set{
     width: 70%;
@@ -633,13 +633,14 @@ Start of ContactMe section
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 3.5rem;
     border-radius: 40px;
     background-color: #f3c430;
     box-shadow: 0px 0px 20px 0px #000;
 }
 
 .contact-box h1{
+    text-align: center;
     font-family: Carter One;
 }
 
@@ -665,6 +666,14 @@ Start of ContactMe section
     cursor: pointer;
 }
 #linkedinprofile-svg:hover {
+    fill: #0077b5;
+}
+#githubprofile-svg{
+    width: 50px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+#githubprofile-svg:hover {
     fill: #0077b5;
 }
 
